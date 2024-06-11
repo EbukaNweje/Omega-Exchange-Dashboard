@@ -69,7 +69,7 @@ const Dashboard = () => {
     }, [id]);
 
     console.log("User Id from URL:", userData);
-
+    
     const [showUserDrop, setShowUserDrop] = useState(false);
     const userDropdownRef = useRef(null);
 
@@ -540,7 +540,7 @@ const Dashboard = () => {
                             ) : null}
                         </div>
                         <div className="DashboardMainFooter">
-                            <p>All Rights Reserved © Tradingassets 2024</p>
+                            <p>All Rights Reserved © Omega Exchange 2024</p>
                         </div>
                     </div>
                 </div>
