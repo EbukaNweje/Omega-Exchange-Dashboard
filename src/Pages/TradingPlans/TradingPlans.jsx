@@ -183,33 +183,7 @@ const TradingPlans = () => {
                 setShow({err: true, msg : error.response.data.message})
             });
     };
-    // const checkAmount = () => {
-    //     if (!planPrice) {
-    //         alert("Please input a deposit amount");
-    //     } else if (!selectedPackage) {
-    //         alert("Please select a package");
-    //     } else if (planPrice > parseInt(userData.accountBalance)) {
-    //         alert("Insufficent funds");
-    //     } else {
-    //         const planPriceNumber = parseFloat(planPrice.replace(/,/g, ""));
-    //         const minDepositNumber = parseFloat(
-    //             selectedPackage.minimumDeposit.replace(/,/g, "")
-    //         );
 
-    //         if (isNaN(planPriceNumber) || isNaN(minDepositNumber)) {
-    //             alert("Invalid plan price or minimum deposit");
-    //         } else if (planPriceNumber < minDepositNumber) {
-    //             alert(
-    //                 `${selectedPackage.planName} minimum deposit should be at least $${minDepositNumber}`
-    //             );
-    //         } else {
-    //             dispatch(addPlans(selectedPackage));
-    //             console.log("Making Plan...");
-    //             alert("Success.....");
-    //             // window.location.reload();
-    //         }
-    //     }
-    // };
 
     const updatePlanPrice = (value) => {
         setPlanPrice(value);
