@@ -387,7 +387,7 @@ useEffect(()=>{
                         </div>
                     </div>
                     <div className="DashHomeMainContenVidDiv">
-                        <video src={vid} muted autoPlay loop></video>
+                        <video src={vid} muted  loop></video>
                     </div>
                 </div>
             </div>
