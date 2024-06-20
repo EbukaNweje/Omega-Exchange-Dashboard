@@ -9,6 +9,7 @@ import {FaArrowRight, FaChevronRight} from "react-icons/fa6";
 import {getSinglePlan} from "../../Components/store/FeaturesSlice";
 import "../MyPlans/MyPlans.css";
 import { useParams } from "react-router";
+import { CopyToClipboard } from "react-copy-to-clipboard";
 
 const DashHome = ({
     homechange,
@@ -63,8 +64,8 @@ const DashHome = ({
     const [others, setOthers] = useState();
     const [alluserplan, setAlluserplan] = useState();
 
-    const url3 = `https://g-berrybackend.onrender.com/api/getalltransactions/${id}`
-    const url4 = `https://g-berrybackend.onrender.com/api/getalluserplan/${id}`
+    const url3 = `https://omegaexchangebackend.onrender.com/api/getalltransactions/${id}`
+    const url4 = `https://omegaexchangebackend.onrender.com/api/getalluserplan/${id}`
 
     const getAllOthers = ()=>{
         axios.get(url3)
@@ -108,6 +109,12 @@ useEffect(()=>{
     // console.log("Total Investment:", totalInvestment);
     // const bitcoinValue7 = totalInvestment / exchangeRate;
     // const roundedNumber7 = parseFloat(bitcoinValue7.toFixed(8));
+
+
+    const [state, setState] = useState({
+        value: "https://omega-exchange.vercel.app/",
+        copied: false,
+      });
 
     return (
         <>
@@ -364,14 +371,19 @@ useEffect(()=>{
                         <h3>Refer us & Earn</h3>
                         <p>Use the link below to invite your firends.</p>
                         <div className="DashHomeMainContenReferUsDivBox">
-                            <input
-                                type="text"
-                                value={`https://omega-exchange.vercel.app/`}
-                                readOnly
-                            />
-                            <div className="DashHomeMainContenReferUsDivBoxCopy">
-                                <FaCopy />
-                            </div>
+                                <input
+                                    type="text"
+                                    value={state.value}
+                                    readOnly
+                                />
+                                <CopyToClipboard
+                                 text={state.value}
+                                 onCopy={() => setState({ copied: true })}
+                                 >
+                                <div className="DepPaymentContentCTopReferUsDivBoxCopy">
+                                    <FaCopy />
+                                </div>
+                                 </CopyToClipboard>
                         </div>
                     </div>
                     <div className="DashHomeMainContenVidDiv">

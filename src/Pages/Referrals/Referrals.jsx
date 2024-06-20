@@ -1,8 +1,15 @@
 import './Referrals.css'
 import {FaCopy, FaUser} from "react-icons/fa";
 import {FaArrowDownLong, FaArrowUpLong} from "react-icons/fa6";
+import { CopyToClipboard } from "react-copy-to-clipboard";
+import { useState } from 'react';
 
 const Referrals = () => {
+    const [state, setState] = useState({
+        value: "https://omega-exchange.vercel.app/",
+        copied: false,
+      });
+
     return (
         <>
             <div className="ReferralBody">
@@ -17,12 +24,17 @@ const Referrals = () => {
                             <div className="ReferralContentTopReferUsDivBox">
                                 <input
                                     type="text"
-                                    value={"https://omega-exchange.vercel.app/"}
+                                    value={state.value}
                                     readOnly
                                 />
-                                <div className="ReferralContentTopReferUsDivBoxCopy">
+                                <CopyToClipboard
+                                 text={state.value}
+                                 onCopy={() => setState({ copied: true })}
+                                 >
+                                <div className="DepPaymentContentCTopReferUsDivBoxCopy">
                                     <FaCopy />
                                 </div>
+                                 </CopyToClipboard>
                             </div>
                         </div>
                         <div className='ReferralContentTopInfoBox'>

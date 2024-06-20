@@ -260,7 +260,7 @@ useEffect(()=>{
                                 </div>
                                 <div className="TransactionContentResultC">
                                 {
-                                        allWithdrawal.map((props)=>( 
+                                        allWithdrawal?.map((props)=>( 
                                     <div className="TransactionContentResultCItem">
                                         <div className="TransactionContentResultC1W">
                                             ${props.amount}

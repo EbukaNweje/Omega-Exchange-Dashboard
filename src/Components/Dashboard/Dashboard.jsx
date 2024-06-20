@@ -481,7 +481,7 @@ const Dashboard = () => {
                                     <div className="DashboardMainHeaderUserAccDiv">
                                         <div className="DashboardMainHeaderUserAccDivWrap">
                                             <p>Hi {userData?.fullName}</p>
-                                            <div className="DashboardMainHeaderUserAccDivPfp">
+                                            <div className="DashboardMainHeaderUserAccDivPfp" onClick={handleShowProfile}>
                                                 <span>
                                                     <FaRegUser />
                                                 </span>
