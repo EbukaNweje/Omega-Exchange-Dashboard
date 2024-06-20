@@ -38,6 +38,8 @@ import Referrals from "../../Pages/Referrals/Referrals";
 import ScrollToTop from "../ScrollToTop";
 import Swal from "sweetalert2";
 import DetailPlan from "../../Pages/MyPlans/DetailPlan";
+import { IoIosNotifications } from "react-icons/io";
+
 
 const Dashboard = () => {
     const dispatch = useDispatch();
@@ -459,6 +461,12 @@ const Dashboard = () => {
                     <div className={`DashboardMain ${showNav ? "active" : ""}`}>
                         <div className="DashboardMainHeader">
                             <div className="DashboardMainHeaderBox">
+                                <div className="DashboardMainHeaderBoxHambuger" >
+                                    <IoIosNotifications style={{
+                                        fontSize: "20px",
+                                        cursor: "pointer"
+                                    }}/>
+                                </div>
                                 <div className="DashboardMainHeaderBoxHambuger">
                                     <MdOutlineMenu
                                         className="MdOutlineMenu"

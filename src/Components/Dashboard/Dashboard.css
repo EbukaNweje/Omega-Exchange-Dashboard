@@ -300,7 +300,7 @@
 }
 
 .DashboardMainHeaderBox{
-  width: 200px;
+  width: 250px;
   height: 38px;
   display: flex;
   align-items: center;
@@ -311,6 +311,9 @@
   width: 30px;
   height: 30px;
   color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 20;
 }
 .DashboardMainHeaderBoxHambuger .MdOutlineMenu{
   width: 25px;
