@@ -3,10 +3,15 @@ import {FaCopy, FaUser} from "react-icons/fa";
 import {FaArrowDownLong, FaArrowUpLong} from "react-icons/fa6";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import { useState } from 'react';
+import { useParams } from 'react-router';
 
 const Referrals = () => {
+    const {id} = useParams()
+    
+    const myshowid = id.slice(0,7)
+    console.log("my show is", myshowid)
     const [state, setState] = useState({
-        value: "https://omega-exchange.vercel.app/",
+        value: `omega-exchange.vercel.app/?${myshowid}`,
         copied: false,
       });
 
