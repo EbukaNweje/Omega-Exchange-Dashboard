@@ -386,9 +386,9 @@ useEffect(()=>{
                                  </CopyToClipboard>
                         </div>
                     </div>
-                    <div className="DashHomeMainContenVidDiv">
+                    {/* <div className="DashHomeMainContenVidDiv">
                         <video src={vid} muted autoPlay loop></video>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </>
