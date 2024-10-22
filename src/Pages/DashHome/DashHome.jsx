@@ -349,15 +349,15 @@ useEffect(()=>{
                                     <>
                                         {
                                             others?.map((props) => (
-                                    <div className="DashHomeMainContenRecentTransactionDivBoxDownItem1" key={props._id}>
+                                    <div className="DashHomeMainContenRecentTransactionDivBoxDownItem1" key={props?._id}>
                                     <p className="DashHomeMainContenRecentTransactionDivBoxDownItem1Date">
-                                        {props.date}
+                                        {props?.date}
                                     </p>
                                     <p className="DashHomeMainContenRecentTransactionDivBoxDownItem1Type">
-                                        {props.transactionType}
+                                        {props?.transactionType}
                                     </p>
                                     <p className="DashHomeMainContenRecentTransactionDivBoxDownItem1Amount">
-                                        {props.amount}
+                                        {props?.amount}
                                     </p>
                                 </div>
                                             ))
