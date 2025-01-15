@@ -35,7 +35,7 @@ const Payment = () => {
       });
 
       const url = `https://omegaexchangebackend.onrender.com/api/sendpayment/${id}`
-      const url2 = `https://omega-exchange-back-end.vercel.app/api/deposit/${id}`
+      const url2 = `https://omega-exchange-back-end-one.vercel.app/api/deposit/${id}`
 
       const data = {
         amount:amount

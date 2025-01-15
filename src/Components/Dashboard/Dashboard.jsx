@@ -49,7 +49,7 @@ const Dashboard = () => {
     const [userData, setUserdata] = useState({});
 
     const handleGetUser = async () => {
-        fetch(`https://omega-exchange-back-end.vercel.app/api/userdata/${id}`, {
+        fetch(`https://omega-exchange-back-end-one.vercel.app/api/userdata/${id}`, {
             method: "GET",
         })
             .then((response) => response.json())
