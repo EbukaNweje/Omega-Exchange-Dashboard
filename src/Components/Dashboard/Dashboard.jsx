@@ -39,6 +39,11 @@ import ScrollToTop from "../ScrollToTop";
 import Swal from "sweetalert2";
 import DetailPlan from "../../Pages/MyPlans/DetailPlan";
 import { IoIosNotifications } from "react-icons/io";
+import { MdCancel } from "react-icons/md";
+import { FaFilter } from "react-icons/fa";
+import { Select } from 'antd';
+import axios from "axios";
+
 
 
 const Dashboard = () => {
@@ -114,6 +119,23 @@ const Dashboard = () => {
     const handleAdmin = () => {
         // window.location.href = "https://www.whitebitcrypfield.org/#/admin";
     };
+        const [userPlane, setUserPlane] = useState([]);
+
+        const getallPlan = () => {
+            const url = "https://omega-exchange-back-end-one.vercel.app/api/getallplan";
+            axios.get(url)
+                .then((response) => {
+                    // console.log(response.data.data);
+                    setUserPlane(response?.data?.data)
+                    console.log("gggg",response?.data?.data);
+                })
+                .catch((error) => {
+                    console.log(error);
+                });
+        };
+        useEffect(() => {
+            getallPlan();
+        }, []);
 
     const [showHome, setShowHome] = useState(true);
     const [showdeposit, setShowDeposit] = useState(false);
@@ -124,9 +146,11 @@ const Dashboard = () => {
     const [showProfile, setShowProfile] = useState(false);
     const [showTradingPlans, setTradingPlans] = useState(false);
     const [showMyPlans, setShowMyPlans] = useState(false);
-    const [showReferrals, setShowReferrals] = useState(false);
+    const [showReferrals, setShowReferrals] = useState(false)
     const [showDetailPlan, setShowDetailPlan] = useState(false);
+    const [invest, setInvest] = useState(false);
 
+    
     const handleShowHome = () => {
         setShowHome(true);
         setShowDeposit(false);
@@ -284,6 +308,16 @@ const Dashboard = () => {
 
     const Contactus = () => {
         Swal.fire("Contact us on live support");
+    };
+    const [showNotification, setNotification] = useState(false)
+
+
+    const handleNotification =()=>{
+        setNotification((prev)=> !prev)
+    }
+
+    const handleInvestmentButton = () => {
+        setInvest(!invest);
     };
 
     return (
@@ -465,7 +499,51 @@ const Dashboard = () => {
                                     <IoIosNotifications style={{
                                         fontSize: "20px",
                                         cursor: "pointer"
-                                    }}/>
+                                    }}
+                                    onClick={handleNotification}
+                                    />
+                                    <div className={`notificationBar ${showNotification ? 'show' : ''}`}>
+                                        <div className="notification_header">
+                                            <h4>Your Notifications</h4>
+                                            <MdCancel className="cancel_icon" onClick={()=> setNotification(false)}/>
+                                        </div>
+                                        <div className="notification_status">
+                                           <div className="status_holder">
+                                             <div className="n_status_card">
+                                                <h4>All</h4>
+                                                </div>
+                                                <div className="n_status_card">
+                                                    <h4>Unread</h4>
+                                                </div>
+                                           </div>
+                                        </div>
+                                        <div className="notification_body">
+                                        
+                                    {userData?.notification ? (
+                                        userPlane
+                                        ?.filter((item) => item.planName !== item.planName.toUpperCase()) // remove ALL UPPERCASE
+                                        .map((item, index)=> (
+                                            <div className="notification_card" key={index} onClick={handleInvestmentButton}>
+                                            <h4>{item?.planName}</h4>
+                                            <p>ROI - {item?.roi}</p>
+                                            <p>{item?.duration}</p>
+                                            <p>{item?.maximumDeposit} - {item?.maxInvestment}</p>
+                                            <div className="investment_btn_div">
+                                                <button className="investment_btn"
+                                                onClick={handleShowTradingPlans}
+                                                >Invest Now</button>
+                                            </div>
+                                            </div>
+                                        ))
+                                    ) : (
+                                        <div className="no_notification">
+                                        <h4>No Notifications</h4>
+                                        </div>
+                                    )
+                                    }
+
+                                        </div>
+                                    </div>
                                 </div>
                                 <div className="DashboardMainHeaderBoxHambuger">
                                     <MdOutlineMenu
