@@ -227,23 +227,26 @@ const TradingPlans = () => {
                             > 
                             {
                                 !userPlane ? "Loading..." : <>
-                                {userPlane?.map((item, index) => (
-                                    <div
-                                        key={index}
-                                        className="TradingPlansLeftBoxADropItem"
-                                        onClick={() => {
-                                            handleShowSelect();
-                                            setSelectedPackage(item);
-                                        }}
-                                    >
-                                        <h3>
-                                            <span>
-                                                <FaHandHoldingDollar />
-                                            </span>
-                                            {item.planName}
-                                        </h3>
-                                    </div>
-                                ))}
+                                {userPlane
+  ?.filter((item) => item.planName === item.planName.toUpperCase())
+  .map((item, index) => (
+    <div
+      key={index}
+      className="TradingPlansLeftBoxADropItem"
+      onClick={() => {
+        handleShowSelect();
+        setSelectedPackage(item);
+      }}
+    >
+      <h3>
+        <span>
+          <FaHandHoldingDollar />
+        </span>
+        {item.planName}
+      </h3>
+    </div>
+))}
+
                                 </>
                             }
                                 
