@@ -120,7 +120,6 @@ const Dashboard = () => {
         // window.location.href = "https://www.whitebitcrypfield.org/#/admin";
     };
         const [userPlane, setUserPlane] = useState([]);
-
         const getallPlan = () => {
             const url = "https://omega-exchange-back-end-one.vercel.app/api/getallplan";
             axios.get(url)

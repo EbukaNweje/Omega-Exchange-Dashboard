@@ -123,7 +123,7 @@ const TradingPlans = () => {
         const url = "https://omega-exchange-back-end-one.vercel.app/api/getallplan";
         axios.get(url)
             .then((response) => {
-                console.log(response.data.data);
+                // console.log(response.data.data);
                 setUserPlane(response.data.data)
             })
             .catch((error) => {
@@ -131,6 +131,14 @@ const TradingPlans = () => {
             });
     };
     
+    const filterPlans  = (userPlane) =>{
+        userPlane.filter((item)=> {
+             if (item.userPlane === item.userPlane.toUpperCase()) {
+                console.log("item", item);
+                return item;
+            }
+        })
+    }
 
     useEffect(() => {
         getallPlan();
