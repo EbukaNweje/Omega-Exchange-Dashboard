@@ -70,6 +70,7 @@
   height: 20px;
 }
 
+
 .DashboardNavLogo .DashboardNavLogoMenuFill{
   width: 30px;
   height: 25px;
@@ -320,6 +321,164 @@
   height: 30px;
   cursor: pointer;
 }
+
+.notificationBar {
+  background-color:white;
+  position: fixed;
+  top: 0;
+  right: -300px; 
+  transition: right 0.4s ease-in-out;
+  z-index: 2;
+}
+
+.notificationBar.show {
+  right: 0;
+  width: 350px;
+  height: 100vh;
+  background-color: #0E4152;
+}
+.notification_header{
+  width: 100%;
+  height: 14.2%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  border-bottom: 1px solid grey;
+}
+
+.cancel_icon{
+  font-size: 25px;
+  color: white;
+  cursor: pointer;
+}
+
+.notification_status{
+  width: 100%;
+  height: 8%;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+
+}
+.status_holder{
+  width: 95%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+}
+.n_status_card:first-child{
+  width: 60px;
+  height: 30px;
+  border-radius: 10px;
+  background-color: #EBF8FC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.n_status_card {
+  width: 85px;
+  height: 30px;
+  border-radius: 10px;
+  background-color: #EBF8FC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  transition: background-color 0.2s ease-in, color 0.2s ease-in;
+}
+.n_status_card:last-child {
+  width: 85px;
+  height: 30px;
+  border-radius: 10px;
+  background-color: #EBF8FC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  transition: background-color 0.2s ease-in, color 0.2s ease-in;
+}
+
+.n_status_card h4 {
+  color: #0d3947;
+  transition: color 0.2s ease-in;
+}
+.notification_body{
+  width: 100%;
+  height: 78%;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+.notification_card{
+  width: 100%;
+  height: 80px;
+  min-height: max-content;
+  background-color: #fff;
+  border-radius: 10px;
+  display: flex;
+  /* align-items: center; */
+ flex-direction: column;
+ justify-content: center;
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.notification_card:hover{
+  background-color: #EBF8FC;
+  cursor: pointer;
+}
+.notification_card h4{
+  font-size: 16px;
+  font-weight: 700;
+  color: #0d3947;
+}
+.investment_btn_div{
+  width: 100%;
+  height: 35px;
+  display: flex;
+  align-items: flex-end;
+}
+.investment_btn{
+  width: 80px;
+  height: 25px;
+  border: none;
+  border-radius: 8px;
+  background-color: #0d3947;
+  color: white;
+  cursor: pointer;
+}
+.notification_card p{
+  font-size: 14px;
+  font-weight: 600;
+  color: #0d3947;
+}
+.n_status_card:hover {
+  cursor: pointer;
+  background-color: #0d3947;
+}
+
+.n_status_card:hover h4 {
+  color: white;
+}
+.n_status{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  font-size: 10px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0d3947;
+}
+
 
 .DashboardMainHeaderBoxAccount{
   width: 140px;
