@@ -524,9 +524,9 @@ const Dashboard = () => {
                                         .map((item, index)=> (
                                             <div className="notification_card" key={index} onClick={handleInvestmentButton}>
                                             <h4>{item?.planName}</h4>
-                                            <p>ROI - {item?.roi}</p>
-                                            <p>{item?.duration}</p>
-                                            <p>{item?.maximumDeposit} - {item?.maxInvestment}</p>
+                                            <p>ROI - {item?.rio}%</p>
+                                            <p>{item?.durationDays}Days</p>
+                                            <p>{item?.minimumDeposit} - {item?.maximumDeposit}</p>
                                             <div className="investment_btn_div">
                                                 <button className="investment_btn"
                                                 onClick={handleShowTradingPlans}
