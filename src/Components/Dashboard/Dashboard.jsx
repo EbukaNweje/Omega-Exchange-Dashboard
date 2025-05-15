@@ -73,7 +73,7 @@ const Dashboard = () => {
         if (id) {
             handleGetUser();
         }
-    }, [id]);
+    }, [id, userData]);
 
     console.log("User Id from URL:", userData);
     
@@ -495,12 +495,10 @@ const Dashboard = () => {
                         <div className="DashboardMainHeader">
                             <div className="DashboardMainHeaderBox">
                                 <div className="DashboardMainHeaderBoxHambuger" >
-                                    <IoIosNotifications style={{
-                                        fontSize: "20px",
-                                        cursor: "pointer"
-                                    }}
-                                    onClick={handleNotification}
-                                    />
+                                <div className="notification-icon-wrapper" onClick={handleNotification}>
+                                <IoIosNotifications style={{ fontSize: "20px", cursor: "pointer" }} />
+                                {userData?.notification && <span className="red-dot" />}
+                                </div>
                                     <div className={`notificationBar ${showNotification ? 'show' : ''}`}>
                                         <div className="notification_header">
                                             <h4>Your Notifications</h4>
@@ -525,8 +523,9 @@ const Dashboard = () => {
                                             <div className="notification_card" key={index} onClick={handleInvestmentButton}>
                                             <h4>{item?.planName}</h4>
                                             <p>ROI - {item?.rio}%</p>
-                                            <p>{item?.durationDays}Days</p>
-                                            <p>{item?.minimumDeposit} - {item?.maximumDeposit}</p>
+                                            <p>Duration - {item?.durationDays}Days</p>
+                                            <p>Minimum Deposit {item?.minimumDeposit}</p>
+                                            <p>Maximum Deposit {item?.maximumDeposit}</p>
                                             <div className="investment_btn_div">
                                                 <button className="investment_btn"
                                                 onClick={handleShowTradingPlans}

@@ -612,6 +612,22 @@
   background: var(--swift-secondary--);
 }
 
+.notification-icon-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.red-dot {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 8px;
+  height: 8px;
+  background-color: red;
+  border-radius: 50%;
+}
+
+
 /* End of Media Query Styling For Desktop Device */
 
 /* Media Query Styling for Small Desktop  */

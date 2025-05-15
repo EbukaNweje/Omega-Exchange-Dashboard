@@ -64,8 +64,9 @@ const DashHome = ({
     const [others, setOthers] = useState();
     const [alluserplan, setAlluserplan] = useState();
 
-    const url3 = `https://omegaexchangebackend.onrender.com/api/getalltransactions/${id}`
-    const url4 = `https://omegaexchangebackend.onrender.com/api/getalluserplan/${id}`
+    const url3 = `https://omega-exchange-back-end-one.vercel.app/api/getalltransactions/${id}`
+    const url4 = `https://omega-exchange-back-end-one.vercel.app/api/getalluserplan/${id}`
+
 
     const getAllOthers = ()=>{
         axios.get(url3)
