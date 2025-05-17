@@ -235,8 +235,13 @@ const TradingPlans = () => {
                             > 
                             {
                                 !userPlane ? "Loading..." : <>
-                                {userPlane
-  ?.filter((item) => item.planName === item.planName.toUpperCase())
+                               {userPlane
+  ?.filter((item) => {
+    // If user has notification true, show all plans
+    if (userData?.notification) return true;
+    // Otherwise, show only plans with capital letter names
+    return item.planName === item.planName.toUpperCase();
+  })
   .map((item, index) => (
     <div
       key={index}
@@ -254,6 +259,7 @@ const TradingPlans = () => {
       </h3>
     </div>
 ))}
+
 
                                 </>
                             }
