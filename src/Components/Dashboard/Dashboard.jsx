@@ -316,7 +316,21 @@ const Dashboard = () => {
     }
 
     const handleInvestmentButton = () => {
-        setInvest(!invest);
+        setNotification(false)
+        setShowNav(false);
+        // setInvest(!invest);
+        setShowHome(false);
+        setShowDeposit(false);
+        setSHowWithdraw(false);
+        setShowProfitHistory(false);
+        setShowTransaction(false);
+        setShowTransferFunds(false);
+        setShowProfile(false);
+        setTradingPlans(true);
+        setShowMyPlans(false);
+        setShowReferrals(false);
+        setShowDetailPlan(false);
+        // handleLinkClick();
     };
 
     return (
@@ -520,18 +534,31 @@ const Dashboard = () => {
                                         userPlane
                                         ?.filter((item) => item.planName !== item.planName.toUpperCase()) // remove ALL UPPERCASE
                                         .map((item, index)=> (
-                                            <div className="notification_card" key={index} onClick={handleInvestmentButton}>
-                                            <h4>{item?.planName}</h4>
-                                            <p>ROI - {item?.rio}%</p>
-                                            <p>Duration - {item?.durationDays}Days</p>
-                                            <p>Minimum Deposit {item?.minimumDeposit}</p>
-                                            <p>Maximum Deposit {item?.maximumDeposit}</p>
-                                            <div className="investment_btn_div">
-                                                <button className="investment_btn"
-                                                onClick={handleShowTradingPlans}
-                                                >Invest Now</button>
-                                            </div>
-                                            </div>
+                                            <div
+    className="notification_card"
+    key={index}
+    onClick={() => {
+        handleInvestmentButton(); // this will setTradingPlans(true) and setShowNav(false)
+    }}
+>
+    <h4>{item?.planName}</h4>
+    <p>ROI - {item?.rio}%</p>
+    <p>Duration - {item?.durationDays} Days</p>
+    <p>Minimum Deposit {item?.minimumDeposit}</p>
+    <p>Maximum Deposit {item?.maximumDeposit}</p>
+    <div className="investment_btn_div">
+        <button
+            className="investment_btn"
+            // onClick={(e) => {
+            //     e.stopPropagation(); // Prevent bubbling up if clicking button
+            //     handleInvestmentButton();
+            // }}
+        >
+            Invest Now
+        </button>
+    </div>
+</div>
+
                                         ))
                                     ) : (
                                         <div className="no_notification">
