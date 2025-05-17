@@ -251,7 +251,7 @@ const TradingPlans = () => {
         setSelectedPackage(item);
       }}
     >
-      <h3>
+      <h3 style={{textTransform: "uppercase"}}>
         <span>
           <FaHandHoldingDollar />
         </span>
