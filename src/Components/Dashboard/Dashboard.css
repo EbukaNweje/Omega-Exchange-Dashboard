@@ -419,7 +419,7 @@
 }
 .notification_card{
   width: 100%;
-  height: 80px;
+  height: max-content;
   min-height: max-content;
   background-color: #fff;
   border-radius: 10px;
@@ -427,7 +427,7 @@
   /* align-items: center; */
  flex-direction: column;
  justify-content: center;
-  padding: 10px;
+  padding: 15px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 .notification_card:hover{
@@ -645,7 +645,13 @@
 
 @media only screen and (max-width: 900px){
 
-
+  .notification_card {
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
 
 }
 
@@ -653,7 +659,13 @@
 /* Media Query Styling for Tablet Device */
 
 @media only screen and (max-width: 760px){
-
+  .notification_card {
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
 
 
 }
@@ -1142,6 +1154,14 @@
   background: var(--swift-secondary--);
 
   }
+
+  .notification_card {
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
 }
 
 /* End of Media Query Styling for Mobile Device */
@@ -1629,6 +1649,14 @@
     line-height: 23.8px;
   background: var(--swift-secondary--);
 
+  }
+
+  .notification_card {
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
   }
 
 }
