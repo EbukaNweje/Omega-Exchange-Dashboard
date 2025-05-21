@@ -233,33 +233,36 @@ const TradingPlans = () => {
                                     showSelect ? "active" : ""
                                 }`}
                             > 
-                          {
-                    !userPlane ? (
-                        "Loading..."
-                    ) : (
-                        <>
-                       {userPlane?.filter((item) => item.planName === item.planName.toUpperCase())
-                                .map((item, index) => (
-                                    <div
-                                    key={index}
-                                    className="TradingPlansLeftBoxADropItem"
-                                    onClick={() => {
-                                        handleShowSelect();
-                                        setSelectedPackage(item);
-                                    }}
-                                    >
-                                    <h3>
-                                        <span>
-                                        <FaHandHoldingDollar />
-                                        </span>
-                                        {item.planName}
-                                    </h3>
-                                    </div>
-                                ))}
-                        </>
-                    )
-                    }
+                            {
+                                !userPlane ? "Loading..." : <>
+                               {userPlane
+  ?.filter((item) => {
+    // If user has notification true, show all plans
+    if (userData?.notification) return true;
+    // Otherwise, show only plans with capital letter names
+    return item.planName === item.planName.toUpperCase();
+  })
+  .map((item, index) => (
+    <div
+      key={index}
+      className="TradingPlansLeftBoxADropItem"
+      onClick={() => {
+        handleShowSelect();
+        setSelectedPackage(item);
+      }}
+    >
+      <h3 style={{textTransform: "uppercase"}}>
+        <span>
+          <FaHandHoldingDollar />
+        </span>
+        {item.planName}
+      </h3>
+    </div>
+))}
 
+
+                                </>
+                            }
                                 
                             </div>
                         </div>

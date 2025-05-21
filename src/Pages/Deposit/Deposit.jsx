@@ -1,6 +1,7 @@
 import {useNavigate} from "react-router-dom";
 import "./Deposit.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 const Deposit = () => {
     const nav = useNavigate();
@@ -11,6 +12,7 @@ const Deposit = () => {
     const [doge, setDoge] = useState(false)
     const [bnb, setbnb] = useState(false)
     const [isButtonDisabled, setButtonDisabled] = useState(true);
+    const [walletAddress, setWalletAddress] = useState([])
 
     const handleAmount = (e) => {
         const newAmount = e.target.value;
@@ -52,6 +54,20 @@ const Deposit = () => {
     }
    
    }
+const handleGetWalletAddress = async () => { 
+  axios.get("https://omega-exchange-back-end-one.vercel.app/api/getallWalletAddress")
+    .then((response) => {
+      setWalletAddress(response.data);
+      console.log(response.data);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+};
+useEffect(() => {
+    handleGetWalletAddress();
+}
+, []);
 
     return (
         <>
@@ -66,7 +82,32 @@ const Deposit = () => {
                         </div>
                         <div className="DepositContentLeftDown">
                             <h3>Choose Payment Method from the list below</h3>
-                            <div className="DepositContentLeftDownInput">
+                            {walletAddress?.data?.map((item, index) => (
+                                <div className="DepositContentLeftDownInput" key={index}>
+                                    <span>{item.walletName} PAYMENT</span>
+                                    <input type="radio"  name="b"
+                                        onChange={()=>{
+                                            // setBitcoin(false),
+                                            // setDoge(false),
+                                            // setEth(false),
+                                            // setbnb(false)
+                                            setButtonDisabled(false)
+                                            if(item.walletName === "Bitcoin"){
+                                                setBitcoin(true)
+                                            }else if(item.walletName === "Ethrbb"){
+                                                setEth(true)
+                                            }else if(item.walletName === "DOGECOIN"){
+                                                setDoge(true)
+                                            }else if(item.walletName === "BNB"){
+                                                setbnb(true)
+                                            }
+                                            localStorage.setItem("selectedWalletId", item._id)
+                                            console.log("stored wallet id", localStorage.getItem("selectedWalletId", item._id))
+                                        }}
+                                    />
+                                </div>
+                        ))}
+                            {/* <div className="DepositContentLeftDownInput">
                                 <span>BITCOIN PAYMENT</span>
                                 <input type="radio"  name="b"
                                     onChange={()=>{
@@ -89,7 +130,7 @@ const Deposit = () => {
                                         setButtonDisabled(false)
                                     }}
                                 />
-                            </div>
+                            </div> */}
                             {/* <div className="DepositContentLeftDownInput">
                                 <span>DOGECOIN PAYMENT</span>
                                 <input type="radio"  name="b"

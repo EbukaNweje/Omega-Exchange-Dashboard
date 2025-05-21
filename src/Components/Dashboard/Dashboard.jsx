@@ -75,7 +75,6 @@ const Dashboard = () => {
         }
     }, [id]);
 
-    console.log("User Id from URL:", userData);
     
     const [showUserDrop, setShowUserDrop] = useState(false);
     const userDropdownRef = useRef(null);
@@ -126,7 +125,7 @@ const Dashboard = () => {
                 .then((response) => {
                     // console.log(response.data.data);
                     setUserPlane(response?.data?.data)
-                    console.log(response?.data?.data);
+                    console.log("gggg",response?.data?.data);
                 })
                 .catch((error) => {
                     console.log(error);
@@ -316,7 +315,21 @@ const Dashboard = () => {
     }
 
     const handleInvestmentButton = () => {
-        setInvest(!invest);
+        setNotification(false)
+        setShowNav(false);
+        // setInvest(!invest);
+        setShowHome(false);
+        setShowDeposit(false);
+        setSHowWithdraw(false);
+        setShowProfitHistory(false);
+        setShowTransaction(false);
+        setShowTransferFunds(false);
+        setShowProfile(false);
+        setTradingPlans(true);
+        setShowMyPlans(false);
+        setShowReferrals(false);
+        setShowDetailPlan(false);
+        // handleLinkClick();
     };
 
     return (
@@ -495,12 +508,10 @@ const Dashboard = () => {
                         <div className="DashboardMainHeader">
                             <div className="DashboardMainHeaderBox">
                                 <div className="DashboardMainHeaderBoxHambuger" >
-                                    <IoIosNotifications style={{
-                                        fontSize: "20px",
-                                        cursor: "pointer"
-                                    }}
-                                    onClick={handleNotification}
-                                    />
+                                <div className="notification-icon-wrapper" onClick={handleNotification}>
+                                <IoIosNotifications style={{ fontSize: "20px", cursor: "pointer" }} />
+                                {userData?.notification && <span className="red-dot" />}
+                                </div>
                                     <div className={`notificationBar ${showNotification ? 'show' : ''}`}>
                                         <div className="notification_header">
                                             <h4>Your Notifications</h4>
@@ -517,28 +528,44 @@ const Dashboard = () => {
                                            </div>
                                         </div>
                                         <div className="notification_body">
-                                        {
-                                            userData?.notification ? (
-                                            userPlane
-                                                ?.filter((item) => item?.planName === item?.planName?.toLowerCase())
-                                                .map((item, index) => (
-                                                <div className="notification_card" key={index} onClick={handleInvestmentButton}>
-                                                    <h4>{item?.planName}</h4>
-                                                    <p>ROI - {item?.roi}</p>
-                                                    <p>{item?.duration}</p>
-                                                    <p>{item?.maximumDeposit} - {item?.maxInvestment}</p>
+                                        
+                                    {userData?.notification ? (
+                                        userPlane
+                                        ?.filter((item) => item.planName !== item.planName.toUpperCase()) // remove ALL UPPERCASE
+                                        .map((item, index)=> (
+                                            <div
+    className="notification_card"
+    key={index}
+    onClick={() => {
+        handleInvestmentButton(); // this will setTradingPlans(true) and setShowNav(false)
+    }}
+>
+    <h4>{item?.planName}</h4>
+    <p>ROI - {item?.rio}%</p>
+    <p>Duration - {item?.durationDays} Days</p>
+    <p>Minimum Deposit {item?.minimumDeposit}</p>
+    <p>Maximum Deposit {item?.maximumDeposit}</p>
+    <div className="investment_btn_div">
+        <button
+            className="investment_btn"
+            // onClick={(e) => {
+            //     e.stopPropagation(); // Prevent bubbling up if clicking button
+            //     handleInvestmentButton();
+            // }}
+        >
+            Invest Now
+        </button>
+    </div>
+</div>
 
-                                                    <div className="investment_btn_div">
-                                                    <button className="investment_btn">Invest Now</button>
-                                                    </div>
-                                                </div>
-                                                ))
-                                            ) : (
-                                            <div className="no_notification">
-                                                <h4>No Notifications</h4>
-                                            </div>
-                                            )
-                                        }
+                                        ))
+                                    ) : (
+                                        <div className="no_notification">
+                                        <h4>No Notifications</h4>
+                                        </div>
+                                    )
+                                    }
+
                                         </div>
 
                                     </div>

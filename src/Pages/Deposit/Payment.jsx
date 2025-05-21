@@ -2,7 +2,7 @@ import {FaCopy} from "react-icons/fa";
 import "./Payment.css";
 import {MdDownloading} from "react-icons/md";
 import { useParams } from "react-router";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import axios from "axios";
 import { useNavigate } from "react-router";
@@ -29,10 +29,7 @@ const Payment = () => {
         }
     const dispatch = useDispatch()
 
-    const [state, setState] = useState({
-        value: `${paymentname === "BTC"? ("bc1q4q9v26l9acc9fremj7cwqtfr33jejrzkh5txt8"): paymentname === "ETH"? ("0x0aC5Ce4Ab1563784F72eC02D9B68589c39a00d6c"):"Chosse a Payment Method"}`,
-        copied: false,
-      });
+
 
       const url = `https://omegaexchangebackend.onrender.com/api/sendpayment/${id}`
       const url2 = `https://omega-exchange-back-end-one.vercel.app/api/deposit/${id}`
@@ -65,7 +62,39 @@ const Payment = () => {
           console.log(err)
         })
       }
+const [walletDetails, setWalletDetails] = useState(null);
 
+  useEffect(() => {
+    const walletId = localStorage.getItem("selectedWalletId");
+
+    if (walletId) {
+      axios.get(`https://omega-exchange-back-end-one.vercel.app/api/getoneWalletAddress/${walletId}`)
+        .then((response) => {
+          setWalletDetails(response.data);
+          console.log("Wallet Data:", response.data);
+        })
+        .catch((error) => {
+          console.error("Error fetching wallet:", error);
+        });
+    } else {
+      console.warn("No wallet ID found in localStorage");
+    }
+  }, [])
+
+      const [state, setState] = useState({
+        value: "",
+        copied: false,
+      });
+
+      useEffect(()=>{
+        if(walletDetails?.data?.walletAddress){
+            setState((prev)=> ({
+                ...prev,
+                value:walletDetails?.data?.walletAddress
+            }))
+        }
+      },[walletDetails])
+      
     return (
         <>
             <div className="DepPaymentBody">
@@ -75,7 +104,7 @@ const Payment = () => {
                         <div className="DepPaymentContentA">
                             <div>Your payment method</div>
                             <p>
-                                {paymentname}{" "}
+                                {walletDetails?.data?.coin}{" "}
                                 <span>
                                     <MdDownloading />
                                 </span>
@@ -86,7 +115,7 @@ const Payment = () => {
                             payment method.
                         </p>
                         <div className="DepPaymentContentC">
-                            <p>{paymentname} Address:</p>
+                            <p>{walletDetails?.data?.coin} Address:</p>
                             <div className="DepPaymentContentCTopReferUsDivBox">
                                 <input
                                     type="text"
@@ -102,7 +131,7 @@ const Payment = () => {
                                 </div>
                                  </CopyToClipboard>
                             </div>
-                            <h5>Network Type:<span>{paymentname=== "BITCOINP PAYMENT"? "BTC" : paymentname=== "ETHEREUM PAYMENT"? "ETH" :  paymentname === "DOGECOIN PAYMENT" ? "DOGECOIN" : paymentname=== "ETHEREUM PAYMENT"? "ETH" :  paymentname === "BNB PAYMENT" ? "BNB": null}</span></h5>
+                            <h5>Network Type:<span>{walletDetails?.data?.coin}</span></h5>
                         </div>
                         <div className="DepPaymentContentD">
                             <p>Upload Payment proof after payment.</p>
