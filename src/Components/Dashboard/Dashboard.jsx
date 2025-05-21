@@ -517,28 +517,30 @@ const Dashboard = () => {
                                            </div>
                                         </div>
                                         <div className="notification_body">
-                                          {
+                                        {
                                             userData?.notification ? (
-                                                userPlane
+                                            userPlane
                                                 ?.filter((item) => item?.planName === item?.planName?.toLowerCase())
                                                 .map((item, index) => (
-                                                    <div className="notification_card" key={index} onClick={handleInvestmentButton}>
+                                                <div className="notification_card" key={index} onClick={handleInvestmentButton}>
                                                     <h4>{item?.planName}</h4>
                                                     <p>ROI - {item?.roi}</p>
                                                     <p>{item?.duration}</p>
                                                     <p>{item?.maximumDeposit} - {item?.maxInvestment}</p>
+
                                                     <div className="investment_btn_div">
-                                                        <button className="investment_btn">Invest Now</button>
+                                                    <button className="investment_btn">Invest Now</button>
                                                     </div>
-                                                    </div>
+                                                </div>
                                                 ))
                                             ) : (
-                                                <div className="no_notification">
+                                            <div className="no_notification">
                                                 <h4>No Notifications</h4>
-                                                </div>
+                                            </div>
                                             )
-                                            }
+                                        }
                                         </div>
+
                                     </div>
                                 </div>
                                 <div className="DashboardMainHeaderBoxHambuger">
