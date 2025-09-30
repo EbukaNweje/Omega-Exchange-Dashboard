@@ -264,7 +264,16 @@ const DashHome = ({
                           <p>End Date</p>
                         </div>
                         <div className="MyPlansActiveDivItem1D">
-                          <button>Active</button>
+                          <button
+                            style={{
+                              backgroundColor:
+                                item?.plan.investment.Status === "Active"
+                                  ? "#008001"
+                                  : "red",
+                            }}
+                          >
+                            {item?.plan.investment.Status}
+                          </button>
                           <p>Status</p>
                         </div>
                         <div className="MyPlansActiveDivItem1E">
