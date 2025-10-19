@@ -1,5 +1,3 @@
-
-
 /* 
 /* TEMPLATE FOR STYLINGS */
 
@@ -48,7 +46,7 @@
   margin-bottom: 17px;
 }
 
-.DashHomeMainContent{
+.DashHomeMainContent {
   width: 100%;
   height: max-content;
   display: flex;
@@ -59,7 +57,7 @@
   border-radius: 5px;
 }
 
-.DashHomeMainContentAccSummaryDiv{
+.DashHomeMainContentAccSummaryDiv {
   width: 100%;
   height: max-content;
   /* background: lightblue; */
@@ -68,14 +66,14 @@
   justify-content: space-between;
 }
 
-.DashHomeMainContentAccSummaryDivH3Text{
+.DashHomeMainContentAccSummaryDivH3Text {
   font-size: 20px;
   font-weight: 600;
   line-height: 26px;
   color: #0e4152;
 }
 
-.DashHomeMainContentAccSummary{
+.DashHomeMainContentAccSummary {
   width: 100%;
   height: max-content;
   display: flex;
@@ -84,7 +82,7 @@
   padding-bottom: 15px;
 }
 
-.DashHomeMainContentAccSummaryRow1{
+.DashHomeMainContentAccSummaryRow1 {
   width: 100%;
   height: max-content;
   display: flex;
@@ -93,7 +91,7 @@
   flex-wrap: wrap;
 }
 
-.DashHomeMainContentAccSummaryRow1Box{
+.DashHomeMainContentAccSummaryRow1Box {
   width: 32%;
   height: 120px;
   border: 1px solid #ebf8fc;
@@ -105,7 +103,7 @@
   justify-content: space-between;
 }
 
-.DashHomeMainContentAccSummaryRow1BoxL{
+.DashHomeMainContentAccSummaryRow1BoxL {
   width: 50%;
   height: 100%;
   display: flex;
@@ -115,33 +113,33 @@
   gap: 5px;
 }
 
-.DashHomeMainContentAccSummaryRow1BoxL h4{
+.DashHomeMainContentAccSummaryRow1BoxL h4 {
   font-size: 16px;
   font-weight: 600;
   line-height: 20.8px;
   color: rgb(132, 146, 166);
 }
-.DashHomeMainContentAccSummaryRow1BoxL h3{
+.DashHomeMainContentAccSummaryRow1BoxL h3 {
   font-size: 20px;
   font-weight: 600;
   line-height: 26px;
   color: var(--swift-primary--);
 }
 
-.DashHomeMainContentAccSummaryRow1BoxR{
+.DashHomeMainContentAccSummaryRow1BoxR {
   width: 50%;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.DashHomeMainContentAccSummaryRow1BoxR img{
+.DashHomeMainContentAccSummaryRow1BoxR img {
   width: 100%;
   height: 70%;
   object-fit: cover;
 }
 
-.DashHomeMainContentAccSummaryRow1BoxR span{
+.DashHomeMainContentAccSummaryRow1BoxR span {
   width: 50px;
   height: 50px;
   background: var(--swift-primary--);
@@ -152,7 +150,7 @@
   color: #fff;
 }
 
-.DashHomeMainContentAccSummaryRow2Box{
+.DashHomeMainContentAccSummaryRow2Box {
   width: 32%;
   height: 120px;
   border: 1px solid #ebf8fc;
@@ -164,7 +162,7 @@
   justify-content: space-between;
 }
 
-.DashHomeMainContentAccSummaryRow2BoxL{
+.DashHomeMainContentAccSummaryRow2BoxL {
   width: 50%;
   height: 100%;
   display: flex;
@@ -173,27 +171,27 @@
   padding-left: 25px;
   gap: 5px;
 }
-.DashHomeMainContentAccSummaryRow2BoxL h4{
+.DashHomeMainContentAccSummaryRow2BoxL h4 {
   font-size: 16px;
   font-weight: 600;
   line-height: 20.8px;
   color: rgb(132, 146, 166);
 }
-.DashHomeMainContentAccSummaryRow2BoxL h3{
+.DashHomeMainContentAccSummaryRow2BoxL h3 {
   font-size: 20px;
   font-weight: 600;
   line-height: 26px;
   color: var(--swift-primary--);
 }
 
-.DashHomeMainContentAccSummaryRow2BoxR{
+.DashHomeMainContentAccSummaryRow2BoxR {
   width: 30%;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.DashHomeMainContentAccSummaryRow2BoxR span{
+.DashHomeMainContentAccSummaryRow2BoxR span {
   width: 50px;
   height: 50px;
   background: var(--swift-primary--);
@@ -204,21 +202,21 @@
   color: #fff;
 }
 
-.DashHomeMainContentActiveDiv{
+.DashHomeMainContentActiveDiv {
   width: 100%;
   height: max-content;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.DashHomeMainContentActiveDiv h3{
+.DashHomeMainContentActiveDiv h3 {
   font-size: 20px;
   font-weight: 600;
   line-height: 26px;
   color: #0e4152;
 }
 
-.DashHomeMainContentActiveDivBox{
+.DashHomeMainContentActiveDivBox {
   width: 100%;
   height: max-content;
   border: 1px solid #ebf8fc;
@@ -231,13 +229,13 @@
   gap: 20px;
   padding: 19px;
 }
-.DashHomeMainContentActiveDivBox p{
+.DashHomeMainContentActiveDivBox p {
   font-size: 16px;
   font-weight: 400;
   line-height: 27.7px;
   color: #8492a6;
 }
-.DashHomeMainContentActiveDivBox button{
+.DashHomeMainContentActiveDivBox button {
   width: 110px;
   height: 50px;
   background: var(--swift-primary--);
@@ -250,7 +248,7 @@
   cursor: pointer;
 }
 
-.DashHomeMainContentActiveDivBoxPlans{
+.DashHomeMainContentActiveDivBoxPlans {
   width: 100%;
   height: max-content;
   box-shadow: 0 0.75rem 1.5rem rgba(18, 38, 63, 0.03);
@@ -259,33 +257,33 @@
   gap: 10px;
 }
 
-.DashHomeMainContentActiveDivBoxPlansItem{
+.DashHomeMainContentActiveDivBoxPlansItem {
   width: 100%;
-    height: max-content;
-    padding: 30px 0px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border: 2px solid lightblue;
-    border-radius: 10px;
-    padding-left: 5px;
+  height: max-content;
+  padding: 30px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid lightblue;
+  border-radius: 10px;
+  padding-left: 5px;
 }
 
-.DashHomeMainContenRecentTransactionDiv{
+.DashHomeMainContenRecentTransactionDiv {
   width: 100%;
   height: 240px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.DashHomeMainContenRecentTransactionDiv h3{
+.DashHomeMainContenRecentTransactionDiv h3 {
   font-size: 20px;
   font-weight: 600;
   line-height: 26px;
   color: #0e4152;
 }
 
-.DashHomeMainContenRecentTransactionDivBox{
+.DashHomeMainContenRecentTransactionDivBox {
   width: 100%;
   height: 85%;
   border: 1px solid #ebf8fc;
@@ -293,9 +291,9 @@
   box-shadow: 0 0.75rem 1.5rem rgba(18, 38, 63, 0.03);
   border-radius: 5px;
   padding: 30px;
-} 
+}
 
-.DashHomeMainContenRecentTransactionDivBoxEndText{
+.DashHomeMainContenRecentTransactionDivBoxEndText {
   width: 100%;
   height: 40px;
   display: flex;
@@ -306,18 +304,17 @@
   color: var(--swift-primary--);
   transition: all 0.3s ease-in;
 }
-.DashHomeMainContenRecentTransactionDivBoxEndText:hover{
+.DashHomeMainContenRecentTransactionDivBoxEndText:hover {
   color: #000;
 }
 
-.DashHomeMainContenRecentTransactionDivBoxEndText span{
-  
+.DashHomeMainContenRecentTransactionDivBoxEndText span {
   display: flex;
   justify-content: end;
   align-items: center;
 }
 
-.DashHomeMainContenRecentTransactionDivBoxTop{
+.DashHomeMainContenRecentTransactionDivBoxTop {
   width: 100%;
   height: 50px;
   background: #ebf8fc;
@@ -330,26 +327,26 @@
   padding-left: 20px;
 }
 
-.DashHomeMainContenRecentTransactionDivBoxTopDate{
+.DashHomeMainContenRecentTransactionDivBoxTopDate {
   width: 30%;
   height: 100%;
   display: flex;
   align-items: center;
 }
-.DashHomeMainContenRecentTransactionDivBoxTopType{
+.DashHomeMainContenRecentTransactionDivBoxTopType {
   width: 30%;
   height: 100%;
   display: flex;
   align-items: center;
 }
-.DashHomeMainContenRecentTransactionDivBoxTopAmount{
+.DashHomeMainContenRecentTransactionDivBoxTopAmount {
   width: 30%;
   height: 100%;
   display: flex;
   align-items: center;
 }
 
-.DashHomeMainContenRecentTransactionDivBoxDown{
+.DashHomeMainContenRecentTransactionDivBoxDown {
   width: 100%;
   height: 50px;
   background: #fdfeff;
@@ -359,11 +356,11 @@
   color: #8492a6;
   overflow-y: auto;
 }
-.DashHomeMainContenRecentTransactionDivBoxDown::-webkit-scrollbar{
+.DashHomeMainContenRecentTransactionDivBoxDown::-webkit-scrollbar {
   display: none;
 }
 
-.DashHomeMainContenRecentTransactionDivBoxDownItem1{
+.DashHomeMainContenRecentTransactionDivBoxDownItem1 {
   padding-left: 20px;
   width: 100%;
   height: 50px;
@@ -371,26 +368,26 @@
   align-items: center;
 }
 
-.DashHomeMainContenRecentTransactionDivBoxDownItem1Date{
+.DashHomeMainContenRecentTransactionDivBoxDownItem1Date {
   width: 30%;
   height: 100%;
   display: flex;
   align-items: center;
 }
-.DashHomeMainContenRecentTransactionDivBoxDownItem1Type{
+.DashHomeMainContenRecentTransactionDivBoxDownItem1Type {
   width: 30%;
   height: 100%;
   display: flex;
   align-items: center;
 }
-.DashHomeMainContenRecentTransactionDivBoxDownItem1Amount{
+.DashHomeMainContenRecentTransactionDivBoxDownItem1Amount {
   width: 30%;
   height: 100%;
   display: flex;
   align-items: center;
 }
 
-.DashHomeMainContenReferUsDiv{
+.DashHomeMainContenReferUsDiv {
   width: 100%;
   height: 200px;
   border: 1px solid #ebf8fc;
@@ -402,26 +399,25 @@
   flex-direction: column;
   gap: 15px;
 }
-.DashHomeMainContenReferUsDiv h3{
+.DashHomeMainContenReferUsDiv h3 {
   font-size: 20px;
   font-weight: 600;
   line-height: 26px;
   color: #0e4152;
 }
-.DashHomeMainContenReferUsDiv p{
+.DashHomeMainContenReferUsDiv p {
   font-size: 16px;
   font-weight: 400;
   line-height: 27.7px;
   color: #8492a6;
 }
 
-.DashHomeMainContenReferUsDivBox{
+.DashHomeMainContenReferUsDivBox {
   width: 100%;
   height: 55px;
   display: flex;
-  
 }
-.DashHomeMainContenReferUsDivBox input{
+.DashHomeMainContenReferUsDivBox input {
   width: 93%;
   height: 100%;
   border: 1px solid rgb(216, 216, 216);
@@ -437,14 +433,13 @@
   transition: box-shadow 0.4s ease;
   transition: border 0.3s ease;
 }
-.DashHomeMainContenReferUsDivBox input:focus{
+.DashHomeMainContenReferUsDivBox input:focus {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border: 1px solid rgb(219, 209, 209);
   transition: box-shadow 0.4s ease;
-  
 }
 
-.DashHomeMainContenReferUsDivBoxCopy{
+.DashHomeMainContenReferUsDivBoxCopy {
   width: 7%;
   background: #fff;
   color: var(--swift-primary--);
@@ -459,72 +454,183 @@
   cursor: pointer;
 }
 
-.DashHomeMainContenReferUsDivBoxCopy:hover{
+.DashHomeMainContenReferUsDivBoxCopy:hover {
   background: var(--swift-primary--);
   color: #fff;
 }
 
-.DashHomeMainContenVidDiv{
+.DashHomeMainContenVidDiv {
   width: 100%;
   height: 70vh;
 }
-.DashHomeMainContenVidDiv video{
+.DashHomeMainContenVidDiv video {
   width: 100%;
   height: 100%;
 }
-
 
 /* End of Media Query Styling For Desktop Device */
 
 /* Media Query Styling for Small Desktop  */
 
-@media only screen and (max-width: 1200px){
+@media only screen and (max-width: 1200px) {
+  .DashHomeMainContentAccSummaryRow1Box,
+  .DashHomeMainContentAccSummaryRow2Box {
+    width: 48%;
+    margin-bottom: 20px;
+  }
 
+  .DashHomeMainContentAccSummaryRow1BoxL,
+  .DashHomeMainContentAccSummaryRow2BoxL {
+    width: 65%;
+    padding-left: 15px;
+  }
 
+  .DashHomeMainContentAccSummaryRow1BoxR,
+  .DashHomeMainContentAccSummaryRow2BoxR {
+    width: 35%;
+  }
 
+  .DashHomeMainContenReferUsDivBox input {
+    width: 90%;
+  }
+
+  .DashHomeMainContenReferUsDivBoxCopy {
+    width: 10%;
+  }
+
+  .DashHomeMainContenVidDiv {
+    height: 60vh;
+  }
 }
 
-/* End of Media Query Styling for Tablet Device */
-
+/* End of Media Query Styling for Small Desktop Device */
 
 /* Media Query Styling for Big Tablet Device */
 
-@media only screen and (max-width: 900px){
+@media only screen and (max-width: 900px) {
+  .DashHomeMainContentAccSummaryRow1Box,
+  .DashHomeMainContentAccSummaryRow2Box {
+    width: 100%;
+    margin-bottom: 15px;
+  }
 
+  .DashHomeMainContentAccSummaryRow1BoxL,
+  .DashHomeMainContentAccSummaryRow2BoxL {
+    width: 70%;
+  }
 
+  .DashHomeMainContentAccSummaryRow1BoxR,
+  .DashHomeMainContentAccSummaryRow2BoxR {
+    width: 30%;
+  }
 
+  .DashHomeMainContent {
+    padding: 20px 15px;
+    gap: 30px;
+  }
+
+  .DashHomeMainContenReferUsDiv {
+    height: auto;
+    min-height: 220px;
+  }
+
+  .DashHomeMainContenReferUsDivBox input {
+    width: 85%;
+  }
+
+  .DashHomeMainContenReferUsDivBoxCopy {
+    width: 15%;
+  }
+
+  .DashHomeMainContenVidDiv {
+    height: 50vh;
+  }
 }
 
 /* End of Media Query Styling for Tablet Device */
-/* Media Query Styling for Tablet Device */
+/* Media Query Styling for Small Tablet Device */
 
-@media only screen and (max-width: 760px){
+@media only screen and (max-width: 760px) {
+  .DashHomeBody {
+    padding: 0 15px;
+  }
 
+  .DashHomeHeaderText {
+    font-size: 24px;
+    line-height: 32px;
+  }
 
+  .DashHomeInfoBox1,
+  .DashHomeInfoBox2 {
+    height: auto;
+    min-height: 75px;
+    padding: 15px;
+    font-size: 13px;
+  }
 
+  .DashHomeMainContent {
+    padding: 15px 10px;
+    gap: 25px;
+  }
+
+  .DashHomeMainContentAccSummaryDivH3Text {
+    font-size: 18px;
+  }
+
+  .DashHomeMainContentAccSummaryRow1BoxL h4,
+  .DashHomeMainContentAccSummaryRow2BoxL h4 {
+    font-size: 14px;
+  }
+
+  .DashHomeMainContentAccSummaryRow1BoxL h3,
+  .DashHomeMainContentAccSummaryRow2BoxL h3 {
+    font-size: 18px;
+  }
+
+  .DashHomeMainContenRecentTransactionDivBox {
+    padding: 15px;
+  }
+
+  .DashHomeMainContenRecentTransactionDivBoxTop {
+    font-size: 11px;
+    padding-left: 10px;
+  }
+
+  .DashHomeMainContenReferUsDivBox input {
+    width: 80%;
+    font-size: 14px;
+  }
+
+  .DashHomeMainContenReferUsDivBoxCopy {
+    width: 20%;
+  }
+
+  .DashHomeMainContenVidDiv {
+    height: 45vh;
+  }
 }
 
-/* End of Media Query Styling for Tablet Device */
+/* End of Media Query Styling for Small Tablet Device */
 
 /* Media Query Styling for Mobile Device */
 
 @media only screen and (max-width: 480px) {
-
   .DashHomeBody {
     width: 100%;
     height: max-content;
-    padding: 0 20px;
+    padding: 0 15px;
     display: flex;
     flex-direction: column;
   }
-  
+
   .DashHomeHeaderText {
-    font-size: 28px;
-    font-weight: 400;
-    line-height: 36.4px;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 30px;
     color: #fff;
+    margin-bottom: 15px;
   }
-  
+
   .DashHomeInfoBox1 {
     width: 100%;
     height: 75px;
@@ -538,7 +644,7 @@
     color: #4816a2;
     margin-bottom: 15px;
   }
-  
+
   .DashHomeInfoBox2 {
     width: 100%;
     height: 75px;
@@ -552,8 +658,8 @@
     color: #0f758e;
     margin-bottom: 17px;
   }
-  
-  .DashHomeMainContent{
+
+  .DashHomeMainContent {
     width: 100%;
     height: max-content;
     display: flex;
@@ -563,8 +669,8 @@
     background: #fff;
     border-radius: 5px;
   }
-  
-  .DashHomeMainContentAccSummaryDiv{
+
+  .DashHomeMainContentAccSummaryDiv {
     width: 100%;
     height: max-content;
     /* background: lightblue; */
@@ -572,15 +678,15 @@
     flex-direction: column;
     justify-content: space-between;
   }
-  
-  .DashHomeMainContentAccSummaryDivH3Text{
+
+  .DashHomeMainContentAccSummaryDivH3Text {
     font-size: 20px;
     font-weight: 600;
     line-height: 26px;
     color: #0e4152;
   }
-  
-  .DashHomeMainContentAccSummary{
+
+  .DashHomeMainContentAccSummary {
     width: 100%;
     height: max-content;
     display: flex;
@@ -588,8 +694,8 @@
     justify-content: space-between;
     padding-bottom: 15px;
   }
-  
-  .DashHomeMainContentAccSummaryRow1{
+
+  .DashHomeMainContentAccSummaryRow1 {
     width: 100%;
     height: 100%;
     display: flex;
@@ -597,8 +703,8 @@
     align-items: center;
     flex-wrap: wrap;
   }
-  
-  .DashHomeMainContentAccSummaryRow1Box{
+
+  .DashHomeMainContentAccSummaryRow1Box {
     width: 100%;
     height: 120px;
     border: 1px solid #ebf8fc;
@@ -609,8 +715,8 @@
     display: flex;
     justify-content: space-between;
   }
-  
-  .DashHomeMainContentAccSummaryRow1BoxL{
+
+  .DashHomeMainContentAccSummaryRow1BoxL {
     width: 70%;
     height: 100%;
     display: flex;
@@ -619,27 +725,27 @@
     padding-left: 25px;
     gap: 5px;
   }
-  .DashHomeMainContentAccSummaryRow1BoxL h4{
+  .DashHomeMainContentAccSummaryRow1BoxL h4 {
     font-size: 16px;
     font-weight: 600;
     line-height: 20.8px;
     color: rgb(132, 146, 166);
   }
-  .DashHomeMainContentAccSummaryRow1BoxL h3{
+  .DashHomeMainContentAccSummaryRow1BoxL h3 {
     font-size: 20px;
     font-weight: 600;
     line-height: 26px;
     color: var(--swift-primary--);
   }
-  
-  .DashHomeMainContentAccSummaryRow1BoxR{
+
+  .DashHomeMainContentAccSummaryRow1BoxR {
     width: 30%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  .DashHomeMainContentAccSummaryRow1BoxR span{
+  .DashHomeMainContentAccSummaryRow1BoxR span {
     width: 50px;
     height: 50px;
     background: var(--swift-primary--);
@@ -649,8 +755,8 @@
     justify-content: center;
     color: #fff;
   }
-  
-  .DashHomeMainContentAccSummaryRow2Box{
+
+  .DashHomeMainContentAccSummaryRow2Box {
     width: 100%;
     height: 120px;
     border: 1px solid #ebf8fc;
@@ -661,8 +767,8 @@
     display: flex;
     justify-content: space-between;
   }
-  
-  .DashHomeMainContentAccSummaryRow2BoxL{
+
+  .DashHomeMainContentAccSummaryRow2BoxL {
     width: 70%;
     height: 100%;
     display: flex;
@@ -671,27 +777,27 @@
     padding-left: 25px;
     gap: 5px;
   }
-  .DashHomeMainContentAccSummaryRow2BoxL h4{
+  .DashHomeMainContentAccSummaryRow2BoxL h4 {
     font-size: 16px;
     font-weight: 600;
     line-height: 20.8px;
     color: rgb(132, 146, 166);
   }
-  .DashHomeMainContentAccSummaryRow2BoxL h3{
+  .DashHomeMainContentAccSummaryRow2BoxL h3 {
     font-size: 20px;
     font-weight: 600;
     line-height: 26px;
     color: var(--swift-primary--);
   }
-  
-  .DashHomeMainContentAccSummaryRow2BoxR{
+
+  .DashHomeMainContentAccSummaryRow2BoxR {
     width: 30%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  .DashHomeMainContentAccSummaryRow2BoxR span{
+  .DashHomeMainContentAccSummaryRow2BoxR span {
     width: 50px;
     height: 50px;
     background: var(--swift-primary--);
@@ -701,22 +807,22 @@
     justify-content: center;
     color: #fff;
   }
-  
-  .DashHomeMainContentActiveDiv{
+
+  .DashHomeMainContentActiveDiv {
     width: 100%;
-    height: 270px;
+    height: max-content;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
-  .DashHomeMainContentActiveDiv h3{
+  .DashHomeMainContentActiveDiv h3 {
     font-size: 20px;
     font-weight: 600;
     line-height: 26px;
     color: #0e4152;
   }
-  
-  .DashHomeMainContentActiveDivBox{
+
+  .DashHomeMainContentActiveDivBox {
     width: 100%;
     height: 80%;
     border: 1px solid #ebf8fc;
@@ -728,7 +834,7 @@
     align-items: center;
     gap: 20px;
   }
-  .DashHomeMainContentActiveDivBox p{
+  .DashHomeMainContentActiveDivBox p {
     width: 90%;
     font-size: 16px;
     font-weight: 400;
@@ -736,7 +842,7 @@
     color: #8492a6;
     text-align: center;
   }
-  .DashHomeMainContentActiveDivBox button{
+  .DashHomeMainContentActiveDivBox button {
     width: 110px;
     height: 50px;
     background: var(--swift-primary--);
@@ -748,22 +854,22 @@
     color: #fff;
     cursor: pointer;
   }
-  
-  .DashHomeMainContenRecentTransactionDiv{
+
+  .DashHomeMainContenRecentTransactionDiv {
     width: 100%;
     height: 240px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
-  .DashHomeMainContenRecentTransactionDiv h3{
+  .DashHomeMainContenRecentTransactionDiv h3 {
     font-size: 20px;
     font-weight: 600;
     line-height: 26px;
     color: #0e4152;
   }
-  
-  .DashHomeMainContenRecentTransactionDivBox{
+
+  .DashHomeMainContenRecentTransactionDivBox {
     width: 100%;
     height: 85%;
     border: 1px solid #ebf8fc;
@@ -771,9 +877,9 @@
     box-shadow: 0 0.75rem 1.5rem rgba(18, 38, 63, 0.03);
     border-radius: 5px;
     padding: 30px;
-  } 
-  
-  .DashHomeMainContenRecentTransactionDivBoxEndText{
+  }
+
+  .DashHomeMainContenRecentTransactionDivBoxEndText {
     width: 100%;
     height: 40px;
     display: flex;
@@ -784,18 +890,17 @@
     color: var(--swift-primary--);
     transition: all 0.3s ease-in;
   }
-  .DashHomeMainContenRecentTransactionDivBoxEndText:hover{
+  .DashHomeMainContenRecentTransactionDivBoxEndText:hover {
     color: #000;
   }
-  
-  .DashHomeMainContenRecentTransactionDivBoxEndText span{
-    
+
+  .DashHomeMainContenRecentTransactionDivBoxEndText span {
     display: flex;
     justify-content: end;
     align-items: center;
   }
-  
-  .DashHomeMainContenRecentTransactionDivBoxTop{
+
+  .DashHomeMainContenRecentTransactionDivBoxTop {
     width: 100%;
     height: 50px;
     background: #ebf8fc;
@@ -807,27 +912,27 @@
     color: #8492a6;
     padding-left: 20px;
   }
-  
-  .DashHomeMainContenRecentTransactionDivBoxTopDate{
+
+  .DashHomeMainContenRecentTransactionDivBoxTopDate {
     width: 30%;
     height: 100%;
     display: flex;
     align-items: center;
   }
-  .DashHomeMainContenRecentTransactionDivBoxTopType{
+  .DashHomeMainContenRecentTransactionDivBoxTopType {
     width: 30%;
     height: 100%;
     display: flex;
     align-items: center;
   }
-  .DashHomeMainContenRecentTransactionDivBoxTopAmount{
+  .DashHomeMainContenRecentTransactionDivBoxTopAmount {
     width: 30%;
     height: 100%;
     display: flex;
     align-items: center;
   }
-  
-  .DashHomeMainContenRecentTransactionDivBoxDown{
+
+  .DashHomeMainContenRecentTransactionDivBoxDown {
     width: 100%;
     height: 50px;
     background: #fdfeff;
@@ -837,38 +942,38 @@
     color: #8492a6;
     overflow-y: auto;
   }
-  .DashHomeMainContenRecentTransactionDivBoxDown::-webkit-scrollbar{
+  .DashHomeMainContenRecentTransactionDivBoxDown::-webkit-scrollbar {
     display: none;
   }
-  
-  .DashHomeMainContenRecentTransactionDivBoxDownItem1{
+
+  .DashHomeMainContenRecentTransactionDivBoxDownItem1 {
     padding-left: 20px;
     width: 100%;
     height: 50px;
     display: flex;
     align-items: center;
   }
-  
-  .DashHomeMainContenRecentTransactionDivBoxDownItem1Date{
+
+  .DashHomeMainContenRecentTransactionDivBoxDownItem1Date {
     width: 30%;
     height: 100%;
     display: flex;
     align-items: center;
   }
-  .DashHomeMainContenRecentTransactionDivBoxDownItem1Type{
+  .DashHomeMainContenRecentTransactionDivBoxDownItem1Type {
     width: 30%;
     height: 100%;
     display: flex;
     align-items: center;
   }
-  .DashHomeMainContenRecentTransactionDivBoxDownItem1Amount{
+  .DashHomeMainContenRecentTransactionDivBoxDownItem1Amount {
     width: 30%;
     height: 100%;
     display: flex;
     align-items: center;
   }
-  
-  .DashHomeMainContenReferUsDiv{
+
+  .DashHomeMainContenReferUsDiv {
     width: 100%;
     height: 200px;
     border: 1px solid #ebf8fc;
@@ -880,26 +985,25 @@
     flex-direction: column;
     gap: 15px;
   }
-  .DashHomeMainContenReferUsDiv h3{
+  .DashHomeMainContenReferUsDiv h3 {
     font-size: 20px;
     font-weight: 600;
     line-height: 26px;
     color: #0e4152;
   }
-  .DashHomeMainContenReferUsDiv p{
+  .DashHomeMainContenReferUsDiv p {
     font-size: 16px;
     font-weight: 400;
     line-height: 27.7px;
     color: #8492a6;
   }
-  
-  .DashHomeMainContenReferUsDivBox{
+
+  .DashHomeMainContenReferUsDivBox {
     width: 100%;
     height: 55px;
     display: flex;
-    
   }
-  .DashHomeMainContenReferUsDivBox input{
+  .DashHomeMainContenReferUsDivBox input {
     width: 80%;
     height: 100%;
     border: 1px solid rgb(216, 216, 216);
@@ -915,13 +1019,13 @@
     transition: box-shadow 0.4s ease;
     transition: border 0.3s ease;
   }
-  .DashHomeMainContenReferUsDivBox input:focus{
+  .DashHomeMainContenReferUsDivBox input:focus {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     border: 1px solid rgb(219, 209, 209);
     transition: box-shadow 0.4s ease;
   }
-  
-  .DashHomeMainContenReferUsDivBoxCopy{
+
+  .DashHomeMainContenReferUsDivBoxCopy {
     width: 20%;
     background: #fff;
     color: var(--swift-primary--);
@@ -935,33 +1039,99 @@
     transition: all 0.2s ease;
     cursor: pointer;
   }
-  
-  .DashHomeMainContenReferUsDivBoxCopy:hover{
+
+  .DashHomeMainContenReferUsDivBoxCopy:hover {
     background: var(--swift-primary--);
     color: #fff;
   }
 
-  .DashHomeMainContenVidDiv{
+  .DashHomeMainContenVidDiv {
     width: 100%;
     height: 40vh;
     background: red;
   }
-  .DashHomeMainContenVidDiv video{
+  .DashHomeMainContenVidDiv video {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
-
 }
 
 /* End of Media Query Styling for Mobile Device */
 
-
-/* Media Query Styling for Mobile Device */
+/* Media Query Styling for Small Mobile Device */
 
 @media only screen and (max-width: 351px) {
+  .DashHomeBody {
+    padding: 0 10px;
+  }
 
+  .DashHomeHeaderText {
+    font-size: 20px;
+    line-height: 28px;
+  }
 
+  .DashHomeMainContent {
+    padding: 10px;
+    gap: 20px;
+  }
+
+  .DashHomeMainContentAccSummaryRow1BoxL,
+  .DashHomeMainContentAccSummaryRow2BoxL {
+    width: 65%;
+    padding-left: 15px;
+  }
+
+  .DashHomeMainContentAccSummaryRow1BoxR,
+  .DashHomeMainContentAccSummaryRow2BoxR {
+    width: 35%;
+  }
+
+  .DashHomeMainContentAccSummaryRow1BoxL h4,
+  .DashHomeMainContentAccSummaryRow2BoxL h4 {
+    font-size: 13px;
+  }
+
+  .DashHomeMainContentAccSummaryRow1BoxL h3,
+  .DashHomeMainContentAccSummaryRow2BoxL h3 {
+    font-size: 16px;
+  }
+
+  .DashHomeMainContentAccSummaryRow1BoxR span,
+  .DashHomeMainContentAccSummaryRow2BoxR span {
+    width: 40px;
+    height: 40px;
+  }
+
+  .DashHomeMainContentActiveDivBox p {
+    width: 95%;
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .DashHomeMainContentActiveDivBox button {
+    width: 100px;
+    height: 45px;
+    font-size: 14px;
+  }
+
+  .DashHomeMainContenReferUsDivBox {
+    height: 45px;
+  }
+
+  .DashHomeMainContenReferUsDivBox input {
+    width: 75%;
+    font-size: 13px;
+    padding-left: 10px;
+  }
+
+  .DashHomeMainContenReferUsDivBoxCopy {
+    width: 25%;
+  }
+
+  .DashHomeMainContenVidDiv {
+    height: 35vh;
+  }
 }
 
-/* End of Media Query Styling for Mobile Device */ 
+/* End of Media Query Styling for Small Mobile Device */
