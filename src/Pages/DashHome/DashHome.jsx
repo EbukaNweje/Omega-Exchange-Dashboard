@@ -272,7 +272,7 @@ const DashHome = ({
                                   : "red",
                             }}
                           >
-                            {item?.plan?.investment?.Status}
+                            {item?.plan?.investment?.status}
                           </button>
                           <p>Status</p>
                         </div>
