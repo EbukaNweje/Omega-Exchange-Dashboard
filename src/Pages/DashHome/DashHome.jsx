@@ -267,7 +267,7 @@ const DashHome = ({
                           <button
                             style={{
                               backgroundColor:
-                                item?.plan?.investment?.Status === "Active"
+                                item?.plan?.investment?.status === "Active"
                                   ? "#008001"
                                   : "red",
                             }}
