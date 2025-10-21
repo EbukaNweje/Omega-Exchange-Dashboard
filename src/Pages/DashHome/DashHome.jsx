@@ -249,30 +249,30 @@ const DashHome = ({
                         key={index}
                       >
                         <div className="MyPlansActiveDivItem1A">
-                          <p>{item?.plan.planName}</p>
-                          <p>Amount - ${item?.plan.investment.amount}</p>
+                          <p>{item?.plan?.planName}</p>
+                          <p>Amount - ${item?.plan.investment?.amount}</p>
                         </div>
                         <div className="MyPlansActiveDivItem1B">
                           <p>
-                            {item?.plan.investment.Date}
+                            {item?.plan?.investment?.Date}
                             <FaArrowRight className="FaArrowRight" />
                           </p>
                           <p>Start Date</p>
                         </div>
                         <div className="MyPlansActiveDivItem1C">
-                          <p>{item?.plan.investment.endDate}</p>
+                          <p>{item?.plan?.investment?.endDate}</p>
                           <p>End Date</p>
                         </div>
                         <div className="MyPlansActiveDivItem1D">
                           <button
                             style={{
                               backgroundColor:
-                                item?.plan.investment.Status === "Active"
+                                item?.plan?.investment?.Status === "Active"
                                   ? "#008001"
                                   : "red",
                             }}
                           >
-                            {item?.plan.investment.Status}
+                            {item?.plan?.investment?.Status}
                           </button>
                           <p>Status</p>
                         </div>
